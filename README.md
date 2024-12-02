@@ -15,20 +15,31 @@ All of the raw data for this paper is available using Resilio Sync with the foll
 XXXXXXXXX
 
 This repository has the following directory structure:
---raw_data                // main directory storing complete data sets used in the paper
-    |
-    -- kesm_brain          // mouse brain imaged using knife-edge scanning microscopy
-    -- lsfm_ovary          // mouse ovary imaged using light sheet microscopy
-    -- lsfm_brain          // mouse brain imaged using light sheet microscopy
-    -- microct_brain1      // brain images collected using micro-CT
-    -- microct_brain2
--- training_data            // main directory containing training/target pairs for U-Net
-    |
-    -- kesm_brain          // kesm data
-          |
-          -- input        // input training data for U-Net training (data that the network takes as input)
-          -- target        // target data for U-Net training (data that the network tries to produce)
-    -- ...                (all other directories follow this format for training/target pairs)
+
+```
+raw_data                      // main directory storing complete data sets used in the paper
+    ├── kesm_brain            // mouse brain imaged using knife-edge scanning microscopy
+    ├── lsfm_ovary            // mouse ovary imaged using light sheet microscopy
+    ├── lsfm_brain            // mouse brain imaged using light sheet microscopy
+    ├── microct_brain1        // brain images collected using micro-CT
+    └── microct_brain2
+training_data                 // main directory containing training/target pairs for U-Net
+    ├── kesm_brain            // kesm data
+        ├── input             // input training data for U-Net training (data that the network takes as input)
+        └── target            // target data for U-Net training (data that the network tries to produce)
+    ├── lsfm_ovary            // (all other directories follow this format for training/target pairs)
+        ├── input
+        └── target
+    ├── lsfm_brain
+        ├── input
+        └── target
+    ├── microct_brain1
+        ├── input
+        └── target
+    └── microct_brain2
+        ├── input
+        └── target
+```
 
 ## Parallel RSF Model
 The code for running a parallel CUDA RSF level set model is provided as C++/CUDA source code that can be built using CMake. The following libraries are required (we recommend using vcpkg as a package manager for any operating system):
