@@ -17,26 +17,31 @@ XXXXXXXXX
 This repository has the following directory structure:
 
 ```
-raw_data                      // main directory storing complete data sets used in the paper
-    ├── kesm_brain            // mouse brain imaged using knife-edge scanning microscopy
-    ├── lsfm_ovary            // mouse ovary imaged using light sheet microscopy
-    ├── lsfm_brain            // mouse brain imaged using light sheet microscopy
-    ├── microct_brain1        // brain images collected using micro-CT
-    └── microct_brain2
+raw_data                                  // main directory storing complete data sets used in the paper
+    ├── kesm_brain                        // mouse brain imaged using knife-edge scanning microscopy
+    ├── lsfm_ovary_mouse_wythe            // mouse ovary imaged using light sheet microscopy
+    ├── lsfm_brain_mouse_wythe            // mouse brain imaged using light sheet microscopy
+    ├── microct_brain258_mouse_wythe      // brain images collected using micro-CT
+    └── microct_brain420_mouse_wythe
 training_data                 // main directory containing training/target pairs for U-Net
     ├── kesm_brain            // kesm data
+        ├── ---.zip           // entire data set as a zipped image stack
         ├── input             // input training data for U-Net training (data that the network takes as input)
         └── target            // target data for U-Net training (data that the network tries to produce)
-    ├── lsfm_ovary            // (all other directories follow this format for training/target pairs)
+    ├── lsfm_ovary_mouse_wythe            // (all other directories follow this format for training/target pairs)
+        ├── ---.zip           // entire data set as a zipped image stack
         ├── input
         └── target
-    ├── lsfm_brain
+    ├── lsfm_brain_mouse_wythe
+        ├── ---.zip           // entire data set as a zipped image stack
         ├── input
         └── target
-    ├── microct_brain1
+    ├── microct_brain258_mouse_wythe
+        ├── ---.zip           // entire data set as a zipped image stack
         ├── input
         └── target
-    └── microct_brain2
+    └── microct_brain420_mouse_wythe
+        ├── ---.zip           // entire data set as a zipped image stack
         ├── input
         └── target
 ```
