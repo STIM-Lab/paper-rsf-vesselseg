@@ -12,7 +12,7 @@ This code is designed to binarize gigavoxel-scale 3D microscopy images of microv
 
 ## Train U-Net and Segment Initial Contour
 All of the raw data for this paper is available using Resilio Sync with the following key:
-XXXXXXXXX
+BBMBDE6MCMVLKIR6XMKQVRFXLWKINYHBG
 
 This repository has the following directory structure:
 
